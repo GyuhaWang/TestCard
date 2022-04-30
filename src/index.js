@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Todo from './Tables/Todo';
+import Inprogress from './Tables/InProgress';
+import Done from './Tables/Done';
 import reportWebVitals from './reportWebVitals';
-
+const cards=[{key: 1, doneCard:"It is done"},]
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className='navbar'></div>
+    <div className='Tables'> <Todo /> <Inprogress/> <Done cards={cards} /></div> 
+   
   </React.StrictMode>
 );
 
